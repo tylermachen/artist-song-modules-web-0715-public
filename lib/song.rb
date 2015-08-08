@@ -1,4 +1,5 @@
 class Song
+  extend Memorable::ClassMethods
   attr_accessor :name
   attr_reader :artist
   @@songs = []
@@ -16,16 +17,8 @@ class Song
     artist.add_song(self)
   end
 
-  def self.reset_all
-    @@songs.clear
-  end
-
   def to_param
     name.downcase.gsub(' ', '-')
-  end
-
-  def self.count
-    self.all.count
   end
 
   def self.all
