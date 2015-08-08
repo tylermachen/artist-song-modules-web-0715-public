@@ -9,6 +9,10 @@ module Memorable
     end
   end
 
+  # can't figure out the use of this
   module InstanceMethods
+    def initialize
+      super
+    end
   end
 end
